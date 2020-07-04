@@ -3,3 +3,16 @@
 没有啥后端思想,所以借用了 yii2 的项目结构,实现了一个基于 koa2 的后台;  
 
 模板使用的是 koa-swig;
+
+.
+├── README.md
+├── REANME.md
+├── app.js
+├── assets
+├── config
+├── controllers
+├── models
+├── node_modules
+├── package-lock.json
+├── package.json
+└── views
