@@ -1,9 +1,9 @@
 /*
  * @Author: Lyun
  * @Date: 2020-07-03 08:53:08
- * @LastEditTime: 2020-07-03 12:47:06
- * @LastEditors: Do not edit
- * @FilePath: \koa_project\controllers\index.js
+ * @LastEditTime: 2020-07-04 19:01:50
+ * @LastEditors: Lyun
+ * @FilePath: /koa_project/controllers/index.js
  * @Description: ...
  */
 const router = require('koa-simple-router');

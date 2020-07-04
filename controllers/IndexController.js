@@ -1,9 +1,9 @@
 /*
  * @Author: Lyun
  * @Date: 2020-07-03 08:47:52
- * @LastEditTime: 2020-07-03 14:43:37
- * @LastEditors: Do not edit
- * @FilePath: \koa_project\controllers\indexController.js
+ * @LastEditTime: 2020-07-04 19:02:17
+ * @LastEditors: Lyun
+ * @FilePath: /koa_project/controllers/IndexController.js
  * @Description: ...
  */
 const controller = require('./controller')
@@ -12,7 +12,9 @@ class IndexController extends controller {
         super()
     }
     async actionIndex(ctx,next) {
-        ctx.body = await ctx.render('index')
+        ctx.body = await ctx.render('index',{
+            data:'模板传递数据'
+        })
     }
 }
 module.exports = IndexController

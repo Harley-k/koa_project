@@ -42,7 +42,7 @@
 </head>
 
 <body>
-    <h1>Test</h1>
+    <h1>{{{data}}}</h1>
     <div class="box">
         <a href="/">
             <div>首页</div>
@@ -54,6 +54,17 @@
             <div>特教云</div>
         </a>
     </div>
+    <script type="module">
+        import('./script/index.js').then(res=>{
+            console.log('module',res.data)
+        })
+    </script>
+    <script type="nomodule" src="https://cdn.staticfile.org/systemjs/6.3.3/s.min.js"></script>
+    <script type="nomodule">
+        import('./script/index_babel.js').then(res=>{
+            console.log('nomodule',res.data)
+        })
+    </script>
 </body>
 
 </html>
