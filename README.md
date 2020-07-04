@@ -4,15 +4,15 @@
 
 模板使用的是 koa-swig;
 
-.
-├── README.md
-├── REANME.md
-├── app.js
-├── assets
-├── config
-├── controllers
-├── models
-├── node_modules
-├── package-lock.json
-├── package.json
-└── views
+        .
+        ├── README.md
+        ├── REANME.md
+        ├── app.js
+        ├── assets
+        ├── config
+        ├── controllers
+        ├── models
+        ├── node_modules
+        ├── package-lock.json
+        ├── package.json
+        └── views
