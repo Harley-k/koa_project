@@ -39,6 +39,7 @@
             text-decoration: none;
         }
     </style>
+    <script src="/utils/utils.js"></script>
 </head>
 
 <body>
@@ -53,6 +54,7 @@
         <a href="/tejiaoyun">
             <div>特教云</div>
         </a>
+        <input type="button" id="js-btn" value="点击">
     </div>
     <script type="module">
         import('./script/index.js').then(res=>{
@@ -65,6 +67,12 @@
         import('./script/index_babel.js').then(res=>{
             console.log('nomodule',res.data)
         })
+    </script>
+    <script>
+        const s = document.getElementById('js-btn')
+        s.addEventListener('click',_.throttle(function(){
+               console.log(s)
+        },1000))
     </script>
 </body>
 
