@@ -1,0 +1,33 @@
+[2020-07-05T17:39:14.343] [ERROR] cheese - ReferenceError: xx is not defined
+    at actionIndex (/Users/liyun/Desktop/zuoye/koa_project/controllers/IndexController.js:16:18)
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:186:18)
+    at Router._lookup (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:198:12)
+    at /Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:138:21
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at /Users/liyun/Desktop/zuoye/koa_project/middlewares/errorHandler.js:25:19
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at /Users/liyun/Desktop/zuoye/koa_project/middlewares/errorHandler.js:15:23
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-static/index.js:53:15)
+[2020-07-05T17:39:15.993] [ERROR] cheese - ReferenceError: xx is not defined
+    at actionIndex (/Users/liyun/Desktop/zuoye/koa_project/controllers/IndexController.js:16:18)
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:186:18)
+    at Router._lookup (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:198:12)
+    at /Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:138:21
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at /Users/liyun/Desktop/zuoye/koa_project/middlewares/errorHandler.js:25:19
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at /Users/liyun/Desktop/zuoye/koa_project/middlewares/errorHandler.js:15:23
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-static/index.js:53:15)
+[2020-07-05T17:39:49.357] [ERROR] cheese - ReferenceError: xx is not defined
+    at actionIndex (/Users/liyun/Desktop/zuoye/koa_project/controllers/IndexController.js:16:18)
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:186:18)
+    at Router._lookup (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:198:12)
+    at /Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-simple-router/index.js:138:21
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at /Users/liyun/Desktop/zuoye/koa_project/middlewares/errorHandler.js:25:19
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at /Users/liyun/Desktop/zuoye/koa_project/middlewares/errorHandler.js:15:23
+    at dispatch (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/liyun/Desktop/zuoye/koa_project/node_modules/koa-static/index.js:53:15)
