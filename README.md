@@ -32,3 +32,5 @@ system.js 使用 module 浏览器不认识的情况下多次加载问题,可以�
  ### log4js记录日志
 
  ## 使用 axios 发请求拿数据
+
+## alias 别名

@@ -1,7 +1,7 @@
 /*
  * @Author: Lyun
  * @Date: 2020-07-05 17:56:46
- * @LastEditTime: 2020-07-05 18:34:56
+ * @LastEditTime: 2020-07-05 18:53:29
  * @LastEditors: Lyun
  * @FilePath: /koa_project/utils/request.js
  * @Description: ...
@@ -44,6 +44,7 @@ service.interceptors.response.use(
      */
     response => {
         const res = response
+        // console.log(res.status)
         // // if the custom code is not 20000, it is judged as an error.
         if (res.status !== 200) {
             // 不等于 200 处理

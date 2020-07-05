@@ -43,7 +43,14 @@
 </head>
 
 <body>
-    <h1>{{{data}}}</h1>
+    <!-- <h1>{{{data}}}</h1> -->
+    <ul>
+    {% for item in data -%}
+    <li>
+    {{{ item.book_code }}} - {{{ item.book_name }}} -  {{{ item.book_desc }}}
+    </li>
+    {%- endfor %}
+    </ul>
     <div class="box">
         <a href="/">
             <div>首页</div>

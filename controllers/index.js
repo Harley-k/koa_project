@@ -1,14 +1,14 @@
 /*
  * @Author: Lyun
  * @Date: 2020-07-03 08:53:08
- * @LastEditTime: 2020-07-04 19:01:50
+ * @LastEditTime: 2020-07-05 18:48:07
  * @LastEditors: Lyun
  * @FilePath: /koa_project/controllers/index.js
  * @Description: ...
  */
 const router = require('koa-simple-router');
-const ApiController = require('./ApiController');
-const IndexController = require('./IndexController');
+const ApiController = require('@controllers/ApiController');
+const IndexController = require('@controllers/IndexController');
 const apiController = new ApiController();
 const indexController = new IndexController();
 
