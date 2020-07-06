@@ -26,8 +26,6 @@ _.each([1, 2, 3], alert); _([1,2,3]).each(alert)
         // 同样的这里的 global 也和 self 一样=>
         //这里通过 selef 和 global 来判断环境 self 和 global 对应的是浏览器环境和 node 环境
         typeof global == 'object' && global.global === global && global ||
-        // 如果啥都没有,自己 return 出去...
-        Function('return this')() ||
         //或者为空对象
         {};
     // 借方法
