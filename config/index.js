@@ -13,15 +13,12 @@ let config = {
     staticDir:join(__dirname,'..','assets')
 }
 if(process.env.NODE_ENV==='development'){
-    console.log(2)
-
     config = extend(config,{
         port:8000,
         memoryFlag:false
     })
 }
 if(process.env.NODE_ENV==='production'){
-    console.log(1)
     config = extend(config,{
         port:80,
         memoryFlag:'memory'

@@ -13,7 +13,14 @@ class IndexController extends controller {
         super()
     }
     async actionIndex(ctx,next) {
-        const data = await books.getList()
+        // const data = await books.getList()
+        const data = [
+            {
+                book_code:'1',
+                book_name:'1',
+                book_desc:''
+            }
+        ]
         // console.log(data)
         ctx.body = await ctx.render('index',{
             data

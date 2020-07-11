@@ -7,6 +7,7 @@
  * @Description: ...
  */
 // alias
+
 const moduleAlias = require('module-alias')
 moduleAlias.addAliases({
     '@views':__dirname +'/views',
