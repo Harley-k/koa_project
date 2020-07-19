@@ -16,7 +16,7 @@ module.exports = (app) => {
     app.use(
         router((_) => {
             _.get('/', indexController.actionIndex)
-            _.get('/scale', apiController.actionScale)
+            _.get('/create', apiController.actionScale)
             _.get('/tejiaoyun', apiController.actionTejiaoyun)
         })
     )

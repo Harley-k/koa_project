@@ -14,13 +14,16 @@ class IndexController extends controller {
     }
     async actionIndex(ctx,next) {
         // const data = await books.getList()
-        const data = [
-            {
-                book_code:'1',
-                book_name:'1',
-                book_desc:''
-            }
-        ]
+        const data = {
+            title:'图书管理',
+            list:[
+                {
+                    book_code:'图书编码',
+                    book_name:'图书名',
+                    book_desc:'图书描述'
+                }
+            ]
+        }
         // console.log(data)
         ctx.body = await ctx.render('index',{
             data
