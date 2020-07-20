@@ -1,0 +1,70 @@
+Arguments: 
+  /Users/harley-k/.nvm/versions/node/v12.18.2/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js
+
+PATH: 
+  /Users/harley-k/.nvm/versions/node/v12.18.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.18.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, open '/Users/harley-k/Library/Caches/Yarn/v6/npm-es-abstract-1.17.6-9142071707857b2cacc7b89ecb670316c3e2d52a-integrity/node_modules/es-abstract/.yarn-metadata.json'
+
+npm manifest: 
+  {
+    "name": "koa_project",
+    "version": "1.0.0",
+    "description": "Koa_架子",
+    "main": "index.js",
+    "directories": {
+      "test": "tests"
+    },
+    "scripts": {
+      "server:dev": "scripty",
+      "server:prod": "scripty",
+      "server:start": "scripty",
+      "client:dev": "scripty",
+      "client:prod": "scripty",
+      "build": "npm-run-all client:prod server:prod",
+      "start": "",
+      "port":"echo $npm_package_config_port"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^0.19.2",
+      "cross-env": "^7.0.2",
+      "koa": "^2.13.0",
+      "koa-simple-router": "^0.2.0",
+      "koa-static": "^5.0.0",
+      "koa-swig": "^2.2.1",
+      "koa2-connect-history-api-fallback": "^0.1.2",
+      "lodash": "^4.17.15",
+      "log4js": "^6.3.0",
+      "module-alias": "^2.2.2"
+    },
+    "config":{
+      "port":"3000"
+    },
+    "devDependencies": {
+      "@babel/cli": "^7.10.4",
+      "@babel/core": "^7.10.4",
+      "@babel/plugin-transform-modules-systemjs": "^7.10.4",
+      "@babel/preset-env": "^7.10.4",
+      "npm-run-all": "^4.1.5",
+      "scripty": "^2.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

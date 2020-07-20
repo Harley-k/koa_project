@@ -1,36 +1,40 @@
-### Koa2 + koa-simple-router + swig  
-
-        .
-        ├── README.md
-        ├── REANME.md
-        ├── app.js
-        ├── assets
-        ├── config
-        ├── controllers
-        ├── models
-        ├── node_modules
-        ├── package-lock.json
-        ├── package.json
-        └── views
+1. 通过gulp把node项目编译  
 
 
-没有啥后端思想,所以借用了 yii2 的项目结构,实现了一个基于 koa2 的后台;  
+### 为什么使用gulp不使用webpack编译nodejs?
+1. gulp简单
+2. 清洗的时候灵活  
+3. webpack前端包工具慢;
 
-模板使用的是 koa-swig;  
 
-system.js 使用 module 浏览器不认识的情况下多次加载问题,可以看下<a href="https://gist.github.com/Harley-K/72a8646ae4354378d97cf63dab4ce9d4">GitHub</a>
+    "prestarts":"echo 111111111", pre是前置钩子
+    "starts":"echo 1",
+    "starts_1":"echo 2",
+    "start":"npm run starts & npm run starts_1" 
+    & 和&& 串行和并行
 
-## 实现一个简易的 underscore 
-在 utils 文件夹
 
-## 容错处理
- middlewares 中间件夹
+### npm插件 
+1. npm-run-all  (多命令执行)
+2. scripty (shell)
+3. webpack-merge (合并config)
 
- 首先得了解 koa 的中间件执行顺序 =>
- 洋葱模型,先把 next 前面的跑完,再从后往前执行 next 后面的
+### npm_package_config_port
+config配置
 
- ### log4js记录日志
 
- ## 使用 axios 发请求拿数据
 
-## alias 别名
+### mpa的多页应用 webpack
+1. nodejs + 后台模板 +html
+2. pages/books/list.html <= 继承自layout.html
+3. 去找页面需要哪些组件? banner组件 
+
+        {% include "../../../components/banner/banner.html" %}
+
+4. 关键的一步 banner.js + banner.css 要带到page里面去  
+
+5. chunk.js相互依赖 
+
+    books/list => list.html => banner.html => banner.css+banner.js  
+
+    list.html => list.entry.js + banner.js => list.js
