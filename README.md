@@ -18,6 +18,7 @@
 1. npm-run-all  (多命令执行)
 2. scripty (shell)
 3. webpack-merge (合并config)
+4. yargs-parser (取到进程上的参数)
 
 ### npm_package_config_port
 config配置
