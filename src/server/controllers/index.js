@@ -6,18 +6,18 @@
  * @FilePath: /koa_project/controllers/index.js
  * @Description: ...
  */
-const router = require('koa-simple-router');
-const ApiController = require('@controllers/ApiController');
-const IndexController = require('@controllers/IndexController');
+import router from 'koa-simple-router';
+import ApiController from '@controllers/ApiController';
+import IndexController from '@controllers/IndexController';
 const apiController = new ApiController();
 const indexController = new IndexController();
 
-module.exports = (app) => {
+export default (app) => {
     app.use(
         router((_) => {
             _.get('/', indexController.actionIndex)
-            _.get('/scale', apiController.actionScale)
-            _.get('/tejiaoyun', apiController.actionTejiaoyun)
+            _.get('/books/list', apiController.actionList)
+            _.get('/books/create', apiController.actionCreate)
         })
     )
 }

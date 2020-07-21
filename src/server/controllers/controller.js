@@ -14,4 +14,4 @@ class Controller {
         console.log('data:', data)
     }
 }
-module.exports = Controller
+export default Controller

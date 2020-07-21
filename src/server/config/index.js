@@ -12,6 +12,9 @@ let config = {
     viewDir :join(__dirname,'..','views'),
     staticDir:join(__dirname,'..','assets')
 }
+if(false){
+    console.log('false')
+}
 if(process.env.NODE_ENV==='development'){
     config = extend(config,{
         port:8000,

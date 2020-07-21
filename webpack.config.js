@@ -6,6 +6,8 @@
  * @FilePath: \koa_project\webpack.config.js
  * @Description: ...
  */
+
+ const {resolve}  = require('path')
 // 通过插件取到webpack运行时的model
 const argv = require('yargs-parser')(process.argv.slice(2))
 const _model = argv.model || 'development'
@@ -56,7 +58,12 @@ const webpackConfig = {
             name: 'runtime'
         }
     },
-    plugins: [..._plugins,new HtmlAfterPlugin()]
+    plugins: [..._plugins,new HtmlAfterPlugin()],
+    resolve:{
+        alias:{
+            "@":resolve('src/web')
+        }
+    }
 }
 
 module.exports = merge(webpackConfig, _mergeConfig)

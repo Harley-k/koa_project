@@ -6,14 +6,12 @@
  * @FilePath: /koa_project/models/index.js
  * @Description: ...
  */ 
-const service = require('@utils/request.js')
+import service from '@utils/request.js'
 // console.log(service)
-module.exports = {
-    books:{
-        getList() {
-            return service({
-              url: '/book/',
-            })
-          }
-    }
+export const books = {
+  getList() {
+    return service({
+      url: '/book/',
+    })
+  }
 }

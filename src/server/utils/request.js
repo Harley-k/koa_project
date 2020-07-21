@@ -6,10 +6,10 @@
  * @FilePath: /koa_project/utils/request.js
  * @Description: ...
  */
-const axios = require('axios')
+import { create } from 'axios'
 
 // create an axios instance
-const service = axios.create({
+const service = create({
     baseURL: 'http://localhost/Yii/web/', // url = base url + request url
     // withCredentials: true, // send cookies when cross-domain requests
     timeout: 5000 // request timeout
@@ -61,4 +61,4 @@ service.interceptors.response.use(
     }
 )
 
-module.exports= service
+export default service

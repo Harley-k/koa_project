@@ -6,8 +6,8 @@
  * @FilePath: /koa_project/controllers/IndexController.js
  * @Description: ...
  */
-const controller = require('@controllers/controller')
-const {books} = require('@models/index.js')
+import controller from '@controllers/controller'
+import { books } from '@models/index.js'
 class IndexController extends controller {
     constructor() {
         super()
@@ -27,4 +27,4 @@ class IndexController extends controller {
         })
     }
 }
-module.exports = IndexController
+export default IndexController

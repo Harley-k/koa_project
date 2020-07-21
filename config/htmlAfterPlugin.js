@@ -35,6 +35,8 @@ class HtmlAfterPlugin {
                 (data, cb) => {
                     let _html = data.html;
                     _html = _html.replace('<!-- injectjs -->', this.jsArr.join(''))
+                    _html = _html.replace(/@components\//g, '../../../')
+                    _html = _html.replace(/@layouts\//g, '../../')
                     data.html = _html
                     cb(null, data)
                 }

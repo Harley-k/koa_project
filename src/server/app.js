@@ -8,8 +8,8 @@
  */
 // alias
 
-const moduleAlias = require('module-alias')
-moduleAlias.addAliases({
+import { addAliases } from 'module-alias';
+addAliases({
     '@views':__dirname +'/views',
     '@models':__dirname +'/models',
     '@controllers':__dirname +'/controllers',
@@ -17,15 +17,15 @@ moduleAlias.addAliases({
     '@middle':__dirname +'/middlewares'
   })
 
-const Koa = require('koa')
-const serve = require('koa-static');
-const { port, memoryFlag, viewDir, staticDir } = require('./config/index.js')
-var render = require('koa-swig');
-const co = require('co')
-const { historyApiFallback } = require('koa2-connect-history-api-fallback');
-const errorHandler = require('@middle/errorHandler')
+import Koa from 'koa';
+import serve from 'koa-static';
+import { port, memoryFlag, viewDir, staticDir } from './config/index.js';
+import render from 'koa-swig';
+import { wrap } from 'co';
+import { historyApiFallback } from 'koa2-connect-history-api-fallback';
+import { error } from '@middle/errorHandler';
 // log4
-const log4js = require('log4js')
+import { configure, getLogger } from 'log4js';
 
 
 
@@ -33,11 +33,11 @@ const log4js = require('log4js')
 const app = new Koa()
 
 // log4config
-log4js.configure({
+configure({
     appenders: { cheese: { type: "file", filename: "./log/errorLog.log" } },
     categories: { default: { appenders: ["cheese"], level: "error" } }
 });
-const logger = log4js.getLogger("cheese");
+const logger = getLogger("cheese");
 
 
 
@@ -46,7 +46,7 @@ const logger = log4js.getLogger("cheese");
 
 app.use(historyApiFallback({ index: '/', whiteList: ['/tejiaoyun', '/scale'] }));
 app.use(serve(staticDir))
-app.context.render = co.wrap(render({
+app.context.render = wrap(render({
     root: viewDir,
     autoescape: true,
     cache: memoryFlag, // disable, set to false
@@ -56,7 +56,7 @@ app.context.render = co.wrap(render({
 }));
 
 // static 之下
-errorHandler.error(app,logger) //处理 error
+error(app,logger) //处理 error
 // 路由之上  
 
 require('@controllers/index.js')(app)

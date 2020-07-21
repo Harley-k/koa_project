@@ -6,16 +6,16 @@
  * @FilePath: /koa_project/controllers/ApiController.js
  * @Description: ...
  */ 
-const controller  = require('@controllers/controller')
+import controller from '@controllers/controller'
 class ApiController extends controller{
     constructor(){
         super()
     }
-    async actionTejiaoyun(ctx,next){
-        ctx.body = await ctx.render('tejiaoyun')
+    async actionList(ctx,next){
+        ctx.body = await ctx.render('books/pages/list')
     }
-    async actionScale(ctx,next){
-        ctx.body = await ctx.render('scale')
+    async actionCreate(ctx,next){
+        ctx.body = await ctx.render('books/pages/create')
     }
 }
-module.exports = ApiController
+export default ApiController

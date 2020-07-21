@@ -2,6 +2,6 @@
 
 // 再由webpack反向的把分析好的js文件塞回 injectjs里面
 
-import banner from '../../components/banner/banner';
+import banner from '@/components/banner/banner';
 
 banner.init();
