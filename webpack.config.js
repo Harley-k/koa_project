@@ -22,6 +22,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const _entry = {}
 let _plugins = []
 
+// 引用自己写的插件
+const HtmlAfterPlugin = require('./config/HtmlAfterPlugin')
+// htmlWebpackPlugin运行的时候暴露出来一些钩子,当它运行的时候,可以直接引用暴露出来的钩子,此时可以自己处理一些事物
+
 for (let item of files) {
     if (/.+\/([a-zA-Z]+-[a-zA-Z]+)(\.entry\.js)/g.test(item)) {
         // 取到值匹配到的文件塞到入口文件里面
@@ -52,7 +56,7 @@ const webpackConfig = {
             name: 'runtime'
         }
     },
-    plugins: [..._plugins]
+    plugins: [..._plugins,new HtmlAfterPlugin()]
 }
 
 module.exports = merge(webpackConfig, _mergeConfig)
