@@ -14,7 +14,7 @@ function builddev() {
         gulp.src('./src/server/app.js')
             .pipe(plumber())
             .pipe(
-                babelrc({
+                babel({
                     babelrc: false,
                     plugins: ["@babel/plugin-transform-modules-commonjs"]
                 })
