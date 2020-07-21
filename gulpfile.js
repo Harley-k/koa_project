@@ -7,6 +7,7 @@ const watch = require('gulp-watch')
 const entry = './src/server/**/*.js'
 const clearEntry = './src/server/config/index.js'
 const plumber = require('gulp-plumber');
+const replace = require('@rollup/plugin-replace')
 
 function builddev() {
     return watch(entry, { ignoreInitial: false }, () => {
@@ -49,7 +50,12 @@ function buildconfig() {
                     input: clearEntry,
                     output: {
                         format: 'cjs'
-                    }
+                    },
+                    plugins: [
+                        replace({
+                            'process.env.NODE_ENV': JSON.stringify('production'),
+                        })
+                    ]
                 })
             )
             .pipe(
