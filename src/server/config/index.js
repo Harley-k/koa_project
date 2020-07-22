@@ -15,6 +15,7 @@ let config = {
 if(false){
     console.log('false')
 }
+console.log('test'+'1')
 if(process.env.NODE_ENV==='development'){
     config = extend(config,{
         port:8000,

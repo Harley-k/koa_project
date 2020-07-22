@@ -58,7 +58,9 @@ const webpackConfig = {
             name: 'runtime'
         }
     },
-    plugins: [..._plugins,new HtmlAfterPlugin()],
+    plugins: [..._plugins,new HtmlAfterPlugin(),
+
+    ],
     resolve:{
         alias:{
             "@":resolve('src/web')

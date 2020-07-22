@@ -14,16 +14,16 @@ addAliases({
     '@models':__dirname +'/models',
     '@controllers':__dirname +'/controllers',
     '@utils':__dirname +'/utils',
-    '@middle':__dirname +'/middlewares'
+    '@middlewares':__dirname +'/middlewares'
   })
-
 import Koa from 'koa';
 import serve from 'koa-static';
 import { port, memoryFlag, viewDir, staticDir } from './config/index.js';
 import render from 'koa-swig';
 import { wrap } from 'co';
 import { historyApiFallback } from 'koa2-connect-history-api-fallback';
-import { error } from '@middle/errorHandler';
+import  errorHandler  from './middlewares/errorHandler.js';
+import controllers from './controllers/index';
 // log4
 import { configure, getLogger } from 'log4js';
 
@@ -44,7 +44,7 @@ const logger = getLogger("cheese");
 
 
 
-app.use(historyApiFallback({ index: '/', whiteList: ['/tejiaoyun', '/scale'] }));
+app.use(historyApiFallback({ index: '/', whiteList: ['/books/list', '/books/create'] }));
 app.use(serve(staticDir))
 app.context.render = wrap(render({
     root: viewDir,
@@ -56,10 +56,10 @@ app.context.render = wrap(render({
 }));
 
 // static 之下
-error(app,logger) //处理 error
+errorHandler.error(app,logger) //处理 error
 // 路由之上  
 
-require('@controllers/index.js')(app)
+controllers(app)
 
 app.listen(port, () => {
     console.log('服务启动成功', port)

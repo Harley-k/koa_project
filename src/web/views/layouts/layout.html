@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock  %}</title>
-    {% block head %}{% endblock  %}
+    <meta charset="UTF-8" />
+    <title>{% block title %}{% endblock %}</title>
+    {% block head %}{% endblock %}
 </head>
 
 <body>
     <div>
-        {% block content %}{% endblock  %}
+        {% block content %}{% endblock %}
     </div>
-
+    {% block scripts %}{% endblock %}
 </body>
 
 </html>

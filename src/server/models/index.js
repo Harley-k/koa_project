@@ -6,7 +6,7 @@
  * @FilePath: /koa_project/models/index.js
  * @Description: ...
  */ 
-import service from '@utils/request.js'
+import service from '../utils/request.js'
 // console.log(service)
 export const books = {
   getList() {
